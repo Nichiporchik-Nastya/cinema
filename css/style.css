@@ -1,0 +1,295 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #621402;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+}
+nav{
+    position: relative;
+}
+header{
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url('../img/bg.jpg') no-repeat center top / cover;
+}
+.menu_link{
+    text-decoration: none;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding-left: 47px;
+}
+.menu_item{
+    margin-right: 25px;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.avatar{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-left: 11px;
+}
+.user{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.film{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+}
+.film_title_small{
+    opacity: 0.5;
+    line-height: 150%;
+    font-size: 24px;
+}
+.film_title{
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 11px;
+    margin-bottom: 23px;
+}
+.fiml_description{
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 560px;
+}
+.film_trailer{
+   margin: auto;
+}
+.time{
+    display: flex;
+    align-items: center;
+}
+.time_icon{
+    margin-right: 14px;
+}
+.rating_current{
+    font-size: 24px;
+    line-height: 150%;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+}
+.rating_icon{
+    margin-right: 14px;
+}
+.film_details{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.session{
+    margin-top: 62px;
+    padding-top: 46px;
+    padding-bottom: 63px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* выравниварие по верхнему левому краю */
+}
+.session_date_block{
+    display: flex;
+}
+.session_label{
+    margin-bottom: 20px;
+    display: block;
+}
+.session_date_item{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: all .2s linear;
+}
+.session_month{
+    text-transform: uppercase;
+    line-height: 19px;
+    font-size: 16px;
+}
+.session_day{
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.session_week{
+    line-height: 22px;
+    font-size: 19px;
+}
+.session_date_item:hover{
+    background-color: #FE8E05;
+    color: #621402;
+    border: 1px solid #621402;
+    cursor: pointer;
+}
+
+.select{
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    padding: 18px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.select_cinema{
+    width: 470px;
+}
+.scheme{
+    background: rgba(36, 36, 36, 0.18);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.scheme_svg{
+    max-width: 1170px;
+}
+.scheme path:not(.light){
+    fill: rgba(255, 255, 255, 0.2);
+    transition: all .2s linear;
+    cursor: pointer;
+}
+.scheme path:not(.light):hover{
+    fill: rgba(255, 255, 255, 0.5);
+}
+.scheme path.booked, .scheme path.booked:hover{ /* при наведении стили не меняются */
+     fill: rgba(255, 255, 255, 0.05);
+     stroke: rgba(255, 255, 255, 0.15);
+     cursor: not-allowed;
+}
+.legend{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 22px;
+    padding-bottom: 38px;
+    margin: auto;
+    max-width: 1024px;
+    width: 90%;
+}
+.legend_label{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.scheme path.active, .scheme path.active:hover{ /* при наведении стили не меняются */
+     fill: #FE8E05;
+    
+}
+.legend svg{
+    margin-right: 15px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.price{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price_label{
+    display: block;
+    line-height: 21px;
+    font-size: 18px;
+}
+.price_tag{
+    font-size: 52px;
+}
+.button{
+    background: #FE8E05;
+    border-radius: 5px;
+    padding: 24px 52px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+.m-menu{
+     display: none;
+ }
+@media(max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+    .select_cinema{
+        width: 100%;
+    }
+}
+@media(max-width: 992px){
+     .container{
+        max-width: 750px;
+    }
+    .session{
+        flex-wrap: wrap; /* если элементы не помещаются все в одну строчку, переходят на следующую */
+    }
+    .session_date{
+        flex-basis: 70%; /* занимает свободную строчку */
+    }
+    .session_time{
+        order: 0;
+    }
+    .session_cinema{
+        order: 3;
+        margin-top: 40px;
+    }
+    .menu_item{
+        margin-right: 20px;
+    }
+}
+@media(max-width: 768px){
+    .container{
+         max-width: 560px;
+    }
+    /* .menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        z-index: 9;
+        border-radius: 5px;
+        padding: 20px;
+        margin-left: 20px;
+        top: 40px;
+        flex-direction: column;
+        background-color: #621402;
+    } */
+    .menu_item:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .m-menu{
+        border: none;
+        background-color: transparent;
+        outline: none;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        cursor: pointer;
+        display: block;
+    }
+}
