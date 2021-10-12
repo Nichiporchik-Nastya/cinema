@@ -15,5 +15,5 @@ schemeSvg.addEventListener('click', (event) => {
 });
 
 menuButton.addEventListener('click', () =>{
-    menu.style.display = 'block';
+    menu.classList.toggle('is-open');
 });

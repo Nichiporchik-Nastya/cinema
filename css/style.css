@@ -15,9 +15,6 @@ a{
     align-items: center;
     padding: 30px 0px;
 }
-nav{
-    position: relative;
-}
 header{
     padding-bottom: 60px;
     background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url('../img/bg.jpg') no-repeat center top / cover;
@@ -37,6 +34,7 @@ header{
 .container{
     max-width: 1170px;
     margin: auto;
+    width: 90%;
 }
 .avatar{
     width: 33px;
@@ -232,8 +230,9 @@ header{
     line-height: 21px;
 }
 .m-menu{
-     display: none;
- }
+    display: none;
+}
+
 @media(max-width: 1200px){
     .container{
         max-width: 960px;
@@ -251,13 +250,13 @@ header{
     }
     .session_date{
         flex-basis: 70%; /* занимает свободную строчку */
+        margin-bottom: 40px;
     }
     .session_time{
         order: 0;
     }
     .session_cinema{
         order: 3;
-        margin-top: 40px;
     }
     .menu_item{
         margin-right: 20px;
@@ -267,8 +266,13 @@ header{
     .container{
          max-width: 560px;
     }
-    /* .menu{
-        display: none;
+    nav{
+        position: relative;
+    }
+    .menu{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20%);
         position: absolute;
         left: 0;
         z-index: 9;
@@ -278,9 +282,7 @@ header{
         top: 40px;
         flex-direction: column;
         background-color: #621402;
-    } */
-    .menu_item:not(:last-child){
-        margin-bottom: 10px;
+        transition: all .2s linear;
     }
     .m-menu{
         border: none;
@@ -288,8 +290,24 @@ header{
         outline: none;
         width: 40px;
         height: 40px;
-        margin-left: 10px;
+        margin-left: 20px;
         cursor: pointer;
         display: block;
+    }
+    .is-open{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .film_description{
+        margin-right: 20px;
+    }
+    .film{
+        flex-direction: column;
+    }
+    .film_trailer{
+        margin-right: auto;
+        margin-left: 0;
+        margin-top: 40px;
     }
 }
